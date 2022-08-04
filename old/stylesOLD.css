@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
+/* Normalizing our CSS */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+/* CSS Variables */
+:root{
+    --main-color: purple;
+    --second-color: green;
+    --third-color: peru;
+    --default-font: 'Montserrat', sans-serif;
+}
+
+
+body{
+    background-color: var(--third-color);
+    font-family: var(--default-font)
+}
+
+.parent-container{
+    display: flex;
+    justify-content: space-around;
+    background-color: red;
+    height: 700px;
+    align-items: center;
+}
+
+@media (max-width: 600px) {
+    .parent-container {
+        flex-direction: column;
+    }
+}
+
+.box1, .box2, .box3 {
+
+    padding: 4rem;
+    margin: 2rem;
+}
+
+
+.box1{
+    background-color: aqua;
+
+}
+.box2{
+    background-color: blueviolet;
+}
+.box3{
+    background-color: var(--second-color);
+}
